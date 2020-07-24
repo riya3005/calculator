@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+//import Keypad from './components/Keypad';
+//import KeypadFCNew from './components/KeypadFC';
+import { BrowserRouter } from 'react-router-dom';
+import FirstPage from './components/FirstPage';
+import KeypadFC from './components/KeypadFC';
+import CurrencyConvertor from './components/CurrencyConvertor'
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <FirstPage>
+          <Switch>
+            <Route path="/" exact component={KeypadFC} />
+            <Route path="/currency" exact component={CurrencyConvertor} />
+          </Switch>
+        </FirstPage>
+      </BrowserRouter>
     </div>
   );
 }

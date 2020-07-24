@@ -1,0 +1,60 @@
+.Keypad {
+    display: flex;
+    background-color:gray;
+    padding: 5px;
+}
+
+.Parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+button {
+    outline: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 6px 4px;
+    border: 1px dotted #ccc;
+    padding: 2px 5px;
+    border: 0;
+    border-radius: 4px;
+    min-width: 100px;
+    height: 60px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    
+}
+
+.CalculatorGrid {
+    /* width: 442px; */
+}
+
+.DisplayPanel {
+    background-color: black;
+    color: white;
+    height: 80px;
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    
+}
+
+.stackdis {
+    font-size: small;
+
+}
+
+.resultdis {
+    font-size: large;
+    font: bold;
+}
